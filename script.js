@@ -1,25 +1,23 @@
 document.getElementById('proxy-form').addEventListener('submit', function(e) {
   e.preventDefault();
-
   const url = document.getElementById('url-input').value;
-  
+
+  // Validate URL format
   if (!isValidUrl(url)) {
     alert('Please enter a valid URL.');
     return;
   }
 
-  // Simulate the proxy call
-  document.getElementById('response-output').textContent = `Proxying request to: ${url}`;
+  // Show loading message
+  document.getElementById('response-output').textContent = 'Proxying request...';
 
-  // Normally here you would send a request to your server-side proxy
-  // Fetch request is just an example (you need to implement your backend proxy logic)
-
-  fetch('/proxy', {
+  // Send URL to the backend proxy server
+  fetch('https://localhost:3000/proxy', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ url })
+    body: JSON.stringify({ url }),
   })
   .then(response => response.json())
   .then(data => {
