@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interstellar Proxy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Interstellar Proxy</h1>
+      <p>Your gateway to the stars (and secure browsing!)</p>
+    </header>
+
+    <main>
+      <form id="proxy-form">
+        <label for="url-input">Enter URL to proxy:</label>
+        <input type="text" id="url-input" placeholder="https://example.com" required>
+        <button type="submit">Proxy It!</button>
+      </form>
+
+      <div id="response">
+        <h2>Response:</h2>
+        <pre id="response-output">Waiting for request...</pre>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
