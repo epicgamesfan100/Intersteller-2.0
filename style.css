@@ -79,3 +79,8 @@ button:hover {
   border-radius: 5px;
   min-height: 150px;
 }
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
