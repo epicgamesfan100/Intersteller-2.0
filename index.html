@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interstellar Proxy</title>
+  <title>Interstellar Secure Proxy</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <header>
       <h1>Interstellar Proxy</h1>
-      <p>Your gateway to the stars (and secure browsing!)</p>
+      <p>Your secure gateway to the web</p>
     </header>
 
     <main>
       <form id="proxy-form">
         <label for="url-input">Enter URL to proxy:</label>
-        <input type="text" id="url-input" placeholder="https://example.com" required>
+        <input type="url" id="url-input" placeholder="https://example.com" required />
         <button type="submit">Proxy It!</button>
       </form>
 
@@ -25,6 +25,10 @@
         <pre id="response-output">Waiting for request...</pre>
       </div>
     </main>
+
+    <footer>
+      <p>&copy; 2025 Secure Interstellar Proxy</p>
+    </footer>
   </div>
 
   <script src="script.js"></script>
